@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ukolnicek_mp2.FXMLDocumentController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="334.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <GridPane alignment="CENTER" minHeight="100.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="211.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.0" minWidth="10.0" prefWidth="469.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="160.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="160.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Task:" />
+                  <Label fx:id="taskLabel" text="?" GridPane.columnIndex="1" />
+                  <Label text="Deadline:" GridPane.rowIndex="1" />
+                  <Label fx:id="date" text="?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="SOMETIMES">
+               <children>
+                  <ListView fx:id="tasksListView" HBox.hgrow="SOMETIMES" />
+                  <TextArea fx:id="description" editable="false" prefHeight="200.0" prefWidth="450.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="680.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleAddButton" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#handleRemoveButton" text="Remove" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
